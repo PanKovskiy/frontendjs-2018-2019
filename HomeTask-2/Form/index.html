@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Title</title>
+    <style>
+        .wrap {
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .content input,
+        .content textarea,
+        .content input,
+        .content select.country-block {
+            width: 300px;
+            float: right;
+        }
+
+
+        .content textarea {
+            resize: none;
+
+        }
+
+        .content input[type="checkbox"],
+        .content input[type="radio"] {
+            width: unset;
+            float: unset;
+            margin-left: 160px;
+            margin-right: 5px;
+        }
+
+        .content .button-add-ava{
+            width: unset;
+            float: unset;
+            width: 100px;
+            margin-left: 66px;
+        }
+
+        .content .exp-block{
+            margin-left: 85px;
+        }
+
+        .content p.text-area {
+            height: 75px;
+        }
+
+        .content .inform-text {
+            margin-left: 165px;
+        }
+
+        .content .button-submit {
+            text-align: right;
+            margin: 10px;
+        }
+
+        .content .button-submit span {
+            padding-right: 5px;
+        }
+
+        .content .button-submit a {
+            text-decoration: none;
+            color: black;
+            padding-right: 10px;
+        }
+
+        .content .button-submit button{
+            padding: 5px;
+            font-size: 16px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="content">
+        <h1>Profile edit page</h1>
+        <form id="profileForm" name="profileForm" action="https://postman-echo.com/post" method="post">
+            <input type="hidden" name="hidden-count" value="1111">
+            <fieldset>
+                <legend>Basic info</legend>
+                <p>
+                    <label for="ID">ID</label>
+                    <input type="number" name="read-only-id" id="ID" value="759" readonly>
+                </p>
+                <p>
+                    <label for="firstName">First Name</label>
+                    <input type="text" name="first-name" id="firstName">
+                </p>
+                <p>
+                    <label for="secondName">Second Name</label>
+                    <input type="text" name="second-name" id="secondName">
+                </p>
+                <p>
+                    <label for="pass">Password</label>
+                    <input type="password" name="password" id="pass">
+                </p>
+                <p>
+                    <label for="phone">Phone</label>
+                    <input type="tel" name="phone" id="phone" placeholder="380">
+                </p>
+                <p>
+                    <label for="mail">Email</label>
+                    <input type="email" name="mail" id="mail" placeholder="myemail@placeholder.com">
+                </p>
+                <p>
+                    <label><input type="checkbox" name="check-mail">Keep my email address private </label>
+                </p>
+                <p class="inform-text">
+                    We'll remove your public profile email and use 19778331+username@users.noreply.loclhost
+                </p>
+                <p>
+                    <label for="date">DOB</label>
+                    <input type="date" name="birthday" id="date">
+                </p>
+                <p>
+                    <label for="blogUrl">Blog url</label>
+                    <input type="url" name="social" id="blogUrl" placeholder="http://">
+                </p>
+                <p class="text-area">
+                    <label for="aboutMeText">About me</label>
+                    <textarea name="about-text" id="aboutMeText" rows="5"></textarea>
+                </p>
+                <p>
+                    <label for="downloadAvatar">Profile picture</label>
+                    <input type="button" id="downloadAvatar" class="button-add-ava" onclick="downloadPicture()" value="Choose the file">
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Professional info</legend>
+                <p>
+                    <label for="levelStudy">Desire to study</label>
+                    <input type="range" name="level-study" min="0" max="7" id="levelStudy">
+                </p>
+                <p>
+                    <label>
+                        Experience
+                    <select name="exp" class="select exp-block">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3" selected>3</option>
+                    </select>
+                    </label>
+                </p>
+                <p>
+                    Development Experience
+                    <br>
+                    <label><input type="radio" name="dev-exp" value="begginer">Learning to Program</label>
+                    <br>
+                    <label><input type="radio" name="dev-exp" value="junior" checked>Junior Developer</label>
+                    <br>
+                    <label><input type="radio" name="dev-exp" value="middle">Mid-Level Developer</label>
+                    <br>
+                    <label><input type="radio" name="dev-exp" value="senior">Senior Developer</label>
+                </p>
+                <p>
+                    <label for="selectCountry">Country</label>
+                    <select name="country" class="select country-block" id="selectCountry">
+                        <option value="">-- Choose your Country --</option>
+                        <option value="ukr">Ukraine</option>
+                        <option value="usa">USA</option>
+                        <option value="tha">Thailand</option>
+                        <option value="spa">Spain</option>
+                    </select>
+                </p>
+                <p>
+                    Skills
+                    <br>
+                    <label><input type="checkbox" id="skill-1" name="skill" value="html">HTML</label>
+                    <br>
+                    <label><input type="checkbox" id="skill-2" name="skill" value="css">CSS</label>
+                    <br>
+                    <label><input type="checkbox" id="skill-3" name="skill" value="js">JavaScript</label>
+                    <br>
+                    <label><input type="checkbox" id="skill-4" name="skill" value="r">R</label>
+                    <br>
+                    <label><input type="checkbox" id="skill-5" name="skill" value="scala">Scala</label>
+                    <br>
+                    <label><input type="checkbox" id="skill-6" name="skill" value="haskell">Haskell</label>
+                </p>
+            </fieldset>
+            <div class="button-submit">
+                <a href="#"><span>&#xff1c;</span>Cancel</a>
+                <button type="submit" formaction="https://postman-echo.com/post">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
