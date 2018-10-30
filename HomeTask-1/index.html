@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrii Pankovetskii</title>
+    <style>
+        header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .text-me {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .text-me .name, .text-me .position {
+            text-align: left;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #747704;
+        }
+
+        .text-me .name {
+            font-size: 24px;
+        }
+
+        .text-me .position {
+            font-size: 18px;
+        }
+
+        .title-main h1 {
+            font-family: 'Raleway', sans-serif;
+            font-size: 36px;
+            font-weight: bold;
+            /*text-align: right;*/
+            color: #BCBBBB;
+            text-align: center;
+        }
+
+        .title-main p {
+            font-family: 'Raleway', sans-serif;
+            text-align: center;
+            font-size: 14px;
+            color: #BCBBBB;
+            margin: 5px;
+        }
+
+        .title-main .big-image {
+            border-top: 4px #BCBBBB solid;
+            padding: 20px 0;
+            width: 100%;
+        }
+
+        .title-featured-work h2 {
+            font-family: 'Raleway', sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: #BCBBBB;
+            margin-bottom: 0;
+            padding-bottom: 10px;
+            padding-left: 10px;
+        }
+
+        .item h3 {
+            font-family: 'Raleway', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            /*text-align: right;*/
+            color: #747704;
+            margin: 0;
+            padding: 10px 0;
+        }
+
+        div h3 {
+            font-family: 'Raleway', sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            color: #747704;
+            margin: 5px 0;
+        }
+
+        .item p {
+            font-family: 'Raleway', sans-serif;
+            text-align: center;
+            font-size: 12px;
+            color: #BCBBBB;
+            margin: 5px;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        @media only screen and ( max-width: 1023px ) {
+            body {
+                background-color: aliceblue;
+            }
+
+            header {
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+            }
+
+            .text-me .name, .text-me .position {
+                text-align: center;
+            }
+
+            .row {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+            }
+
+            .title-featured-work h2 {
+                text-align: center;
+            }
+
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="photo-me">
+        <img src="./img/andreypankovskiy.jpeg" alt="Andrii Pankovetskyi photo">
+    </div>
+    <div class="text-me">
+        <p class="name">Andrii Pankovetskyi</p>
+        <p class="position">Junior front-end develepor</p>
+    </div>
+</header>
+<section>
+    <div class="title-main">
+        <h1>About Me</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ullamcorper sed lacus ut lacinia. Suspendisse leo lectus, scelerisque ac porta nec, ornare vel enim. Phasellus vel nisl quis dui ornare vehicula malesuada id metus. Aenean turpis est, fringilla non accumsan vel, luctus id libero. Nulla lacinia eget tellus et congue. Morbi malesuada, elit quis vestibulum varius, mi felis suscipit dui, in tincidunt augue diam ac massa. Etiam vitae augue interdum, pretium eros et, congue nibh. Etiam sed pretium libero. Duis leo risus, gravida sed congue a, lobortis et ex. Maecenas vitae ornare nibh. Nullam mauris enim, malesuada vitae vehicula in, condimentum vel eros.
+        </p>
+        <img class="big-image" src="./img/code_image.png">
+    </div>
+    <div class="title-featured-work">
+        <h2>Featured Work</h2>
+    </div>
+    <div class="row">
+        <div class="item">
+            <img src="http://placehold.it/300x200">
+            <h3>NAME of PROJECT</h3>
+            <p><a href="#"> Link to project</a></p>
+        </div>
+        <div class="item">
+            <img src="http://placehold.it/300x200">
+            <h3>NAME of PROJECT</h3>
+            <p><a href="#"> Link to project</a></p>
+        </div>
+        <div class="item">
+            <img src="http://placehold.it/300x200">
+            <h3>NAME of PROJECT</h3>
+            <p><a href="#"> Link to project</a></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="item">
+            <img src="http://placehold.it/300x200">
+            <h3>NAME of PROJECT</h3>
+            <p><a href="#"> Link to project</a></p>
+        </div>
+        <div class="item">
+            <img src="http://placehold.it/300x200">
+            <h3>NAME of PROJECT</h3>
+            <p><a href="#"> Link to project</a></p>
+        </div>
+        <div class="item">
+            <img src="http://placehold.it/300x200">
+            <h3>NAME of PROJECT</h3>
+            <p><a href="#"> Link to project</a></p>
+        </div>
+    </div>
+</section>
+</body>
+</html>
